@@ -1,6 +1,8 @@
 import React, { useReducer, useState } from 'react';
 import './App.css';
-import { Calculator } from './components/Calc'
+import { State } from './components/State'
+import { Calculator } from './components/Calculator'
+
 
 const formReducer = (state, event) => {
   if (event.reset) {
@@ -92,6 +94,7 @@ function App() {
         <div><p>your order in json format: <span>{JSON.stringify(formData)}</span></p></div>
       }
       <hr />
+      <State />
       <Calculator />
     </div>
   )
